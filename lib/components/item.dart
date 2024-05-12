@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:toku_app/models/number.dart';
 
 class Item extends StatelessWidget {
@@ -11,7 +12,8 @@ class Item extends StatelessWidget {
       color: Colors.orange,
       child: Row(
         children: [
-          Container(color: Color(0xffFFF6DC), child: Image.asset(number.image)),
+          Container(
+              color: const Color(0xffFFF6DC), child: Image.asset(number.image)),
           Padding(
             padding: const EdgeInsets.only(left: 16),
             child: Column(
@@ -19,23 +21,23 @@ class Item extends StatelessWidget {
               children: [
                 Text(
                   number.jpName,
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  style: const TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 Text(
                   number.enName,
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  style: const TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ],
             ),
           ),
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 16),
-            child: Icon(
+          GestureDetector(
+            onTap: () {},
+            child: const Icon(
               Icons.play_arrow,
-              color: Colors.white,
+              color: Colors.black,
               size: 30,
             ),
           ),
