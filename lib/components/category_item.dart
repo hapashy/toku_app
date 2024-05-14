@@ -12,12 +12,12 @@ class Category extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.only(left: 20),
+        padding: const EdgeInsets.only(left: 20),
         alignment: Alignment.centerLeft,
         color: color,
         child: Text(
           text!,
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: const TextStyle(color: Colors.white, fontSize: 20),
         ),
         height: 65,
         width: double.infinity,

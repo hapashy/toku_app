@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/components/category_item.dart';
+import 'package:toku_app/screens/colors_page.dart';
+
+import 'package:toku_app/screens/family_page.dart';
 import 'package:toku_app/screens/numbers_page.dart';
+import 'package:toku_app/screens/phrases_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,7 +14,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.brown,
-        title: Text(
+        title: const Text(
           'Toku',
           style: TextStyle(color: Colors.white),
         ),
@@ -20,21 +24,36 @@ class HomePage extends StatelessWidget {
           Category(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return NumbersPage();
+                return const NumbersPage();
               }));
             },
             text: 'Numbers',
             color: Colors.orange,
           ),
           Category(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const FamilyMembers();
+              }));
+            },
             text: 'FamilyMembers',
             color: Colors.green,
           ),
           Category(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const ColorsPage();
+              }));
+            },
             text: 'Colors',
             color: Colors.purple,
           ),
           Category(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const PhrasesPage();
+              }));
+            },
             text: 'Phreses',
             color: Colors.blue,
           ),
